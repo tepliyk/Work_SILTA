@@ -11,8 +11,14 @@ use \Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 
+/**
+ * Class academy_event
+ */
 Class academy_event extends CModule
 {
+    /**
+     * academy_event constructor.
+     */
 	function __construct()
 	{
 		$arModuleVersion = array();
@@ -43,6 +49,9 @@ Class academy_event extends CModule
         return CheckVersion(\Bitrix\Main\ModuleManager::getVersion('main'), '14.00.00');
     }
 
+    /**
+     * @return bool
+     */
     function InstallDB()
     {
         return true;
